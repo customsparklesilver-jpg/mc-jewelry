@@ -12,7 +12,7 @@ runs:
   using: 'composite'
   steps:
     - name: ⬇️ Checkout repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
     - name: 📥 Install dependencies
       shell: 'bash'
@@ -24,7 +24,7 @@ runs:
 
     - name: 💾 Turbo cache
       id: turbo-cache
-      uses: actions/cache@v3
+      uses: actions/cache@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3.4.3
       with:
         path: |
           node_modules/.cache/turbo
@@ -38,7 +38,7 @@ runs:
       run: echo "PLAYWRIGHT_VERSION=$(npm ls @playwright/test | grep @playwright -m 1 | sed 's/.*@//')"  >> $GITHUB_ENV
 
     - name: 💾 Cache Playwright binaries
-      uses: actions/cache@v3
+      uses: actions/cache@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3.4.3
       id: playwright-cache
       with:
         path: |
@@ -60,7 +60,7 @@ runs:
       run: URL=${{ inputs.url }} AUTH_BYPASS_TOKEN=${{ inputs.auth-bypass-token }} npx playwright test
 
     - name: 🗒 Report
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
       if: always()
       with:
         name: playwright-report
