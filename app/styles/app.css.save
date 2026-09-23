@@ -292,4 +292,4 @@ shop-pay-button {
   .product-image-hover:hover img {
     transform: none;
   }
-}
+
