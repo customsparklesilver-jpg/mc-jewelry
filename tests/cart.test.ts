@@ -1,8 +1,8 @@
 import {test, expect} from '@playwright/test';
 import {formatPrice, normalizePrice} from './utils';
 
-test.describe('Cart', () => {
-test.skip('From home to checkout flow', async ({page}) => {
+test.describe.skip('Cart', () => {
+test.('From home to checkout flow', async ({page}) => {
 // Home => Collections => First collection => First product
 await page.goto('/');
 await page.goto('/collections');
