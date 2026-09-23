@@ -7,6 +7,7 @@ test.describe('Cart', () => {
     // Home => Collections => First collection => First product
     await page.goto(`/`);
     await page.locator(`header nav a:text-is("Catalog")`).click();
+    await page.locator('[data-test=collection-grid] a >> nth=0').click();
     await page.locator(`[data-test=product-grid] a  >> nth=0`).click();
 
     const firstItemPrice = normalizePrice(
@@ -38,6 +39,7 @@ test.describe('Cart', () => {
     // Close cart drawer => Products => First product
     await page.locator('[data-test=close-cart]').click();
     await page.locator(`header nav a:text-is("Catalog")`).click();
+    await page.locator('[data-test=collection-grid] a >> nth=0').click();
     await page.locator(`[data-test=product-grid] a  >> nth=0`).click();
 
     const secondItemPrice = normalizePrice(
