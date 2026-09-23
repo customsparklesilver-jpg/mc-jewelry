@@ -7,8 +7,8 @@ test.describe('Cart', () => {
     // Home => Collections => First collection => First product
     await page.goto(`/`);
     await page.locator('a:text("Catalog")`).first().click();
-    await page.locator('[data-test=collection-grid] a >> nth=0').click();
-    await page.locator(`[data-test=product-grid] a  >> nth=0`).click();
+    await page.locator('[data-test=collection-grid] a').nth(0).click();
+    await page.locator(`[data-test=product-grid] a').nth=(0)`).click();
 
     const firstItemPrice = normalizePrice(
       await page.locator(`[data-test=price]`).textContent(),
