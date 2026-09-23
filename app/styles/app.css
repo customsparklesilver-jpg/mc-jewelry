@@ -33,6 +33,7 @@
   @supports (height: 100dvh) {
     --screen-height-dynamic: 100dvh;
   }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: 250 250 250;
