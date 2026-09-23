@@ -5,7 +5,7 @@ test.describe('Cart', () => {
 test('From home to checkout flow', async ({page}) => {
 // Home => Collections => First collection => First product
 await page.goto('/');
-await page.locator('a:text("Catalog")').first().click();
+await page.goto('/collections');
 await page.locator('[data-test=collection-grid] a').nth(0).click();
 await page.locator('[data-test=product-grid] a').nth(0).click();
 
@@ -37,7 +37,7 @@ page.locator('[data-test=item-quantity]'),
 
 // Close cart drawer => Products => First product
 await page.locator('[data-test=close-cart]').click();
-await page.locator('header nav a:text-is("Catalog")').click();
+await page.goto('/collections');
 await page.locator('[data-test=collection-grid] a').nth(0).click();
 await page.locator('[data-test=product-grid] a').nth(0).click();
 
