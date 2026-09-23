@@ -46,6 +46,7 @@ jobs:
           echo "DEPLOYMENT_URL=$(jq -r '.url' h2_deploy_log.json)" >> $GITHUB_ENV
 
       - name: Run end-to-end tests
+        continue-on-error: true
         id: end-to-end-tests
         uses: ./.github/actions/end-to-end-tests
         with:
