@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig } from '@Playwright/test';
 
 export default defineConfig({
 testDir: './tests',
