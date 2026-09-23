@@ -4,7 +4,7 @@ export default defineConfig({
 testDir: './tests',
 testMatch: '**/*.test.ts',
 use: {
-baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'https://mc-jewelry.myshopify.com',
+baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'https://mcjewelry.store',
 },
 projects: [
 {
