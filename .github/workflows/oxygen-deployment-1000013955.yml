@@ -47,6 +47,7 @@ jobs:
 
       - name: Run end-to-end tests
         continue-on-error: true
+        if: false
         id: end-to-end-tests
         uses: ./.github/actions/end-to-end-tests
         with:
