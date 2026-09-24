@@ -155,7 +155,12 @@ export default function Homepage() {
 
   return (
     <>
-      <HeroBanner /> 
+      <HeroBanner 
+        headline="Luxury Moissanite"                                                                                         
+        tagline="Crafted for the bold."
+        ctaLink="/collections/all"
+        ctaText="Shop Now"
+        />
       {primaryHero && (
         <Hero {...primaryHero} height="full" top loading="eager" />
       )}
