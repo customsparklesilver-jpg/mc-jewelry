@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import {
 defer,
 type MetaArgs,
