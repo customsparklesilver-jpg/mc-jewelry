@@ -1,9 +1,9 @@
-import { HeroBanner } from '~/components/HeroBanner';
-  defer,
-  type MetaArgs,
-  type LoaderFunctionArgs,
+import {
+defer,
+type MetaArgs,
+type LoaderFunctionArgs,
 } from '@shopify/remix-oxygen';
-import {Suspense} from 'react';
+import { HeroBanner } from '~/components/HeroBanner';
 import {Await, useLoaderData} from '@remix-run/react';
 import {getSeoMeta} from '@shopify/hydrogen';
 
