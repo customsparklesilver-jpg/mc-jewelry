@@ -1,4 +1,4 @@
-import {
+import { HeroBanner } from '~/components/HeroBanner';
   defer,
   type MetaArgs,
   type LoaderFunctionArgs,
@@ -155,6 +155,7 @@ export default function Homepage() {
 
   return (
     <>
+      <HeroBanner /> 
       {primaryHero && (
         <Hero {...primaryHero} height="full" top loading="eager" />
       )}
