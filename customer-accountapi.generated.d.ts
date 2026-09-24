@@ -479,15 +479,15 @@ interface GeneratedQueryTypes {
 }
 
 interface GeneratedMutationTypes {
-  '#graphql\n  mutation customerAddressUpdate(\n    $address: CustomerAddressInput!\n    $addressId: ID!\n    $defaultAddress: Boolean\n ) {\n    customerAddressUpdate(\n      address: $address\n      addressId: $addressId\n      defaultAddress: $defaultAddress\n    ) {\n      userErrors {\n        code\n        field\n        message\n      }\n    }\n  }\n': {
+  '#graphql\nmutation customerAddressUpdate(\n$address: CustomerAddressInput!\n$addressId: ID!\n$defaultAddress: Boolean\n) {\ncustomerAddressUpdate(\naddress: $address\naddressId: $addressId\ndefaultAddress: $defaultAddress\n) {\nuserErrors {\ncode\nfield\nmessage\n}\n}\n}\n': {
     return: CustomerAddressUpdateMutation;
     variables: CustomerAddressUpdateMutationVariables;
   };
-  '#graphql\n  mutation customerAddressDelete(\n    $addressId: ID!,\n  ) {\n    customerAddressDelete(addressId: $addressId) {\n      deletedAddressId\n      userErrors {\n        code\n        field\n        message\n      }\n    }\n  }\n': {
+  '#graphql\nmutation customerAddressDelete(\n$addressId: ID!,\n) {\ncustomerAddressDelete(addressId: $addressId) {\ndeletedAddressId\nuserErrors {\ncode\nfield\nmessage\n}\n}\n}\n': {
     return: CustomerAddressDeleteMutation;
     variables: CustomerAddressDeleteMutationVariables;
   };
-  '#graphql\n  mutation customerAddressCreate(\n    $address: CustomerAddressInput!\n    $defaultAddress: Boolean\n  ) {\n    customerAddressCreate(\n      address: $address\n      defaultAddress: $defaultAddress\n    ) {\n      customerAddress {\n        id\n      }\n      userErrors {\n        code\n        field\n        message\n      }\n    }\n  }\n': {
+  '#graphql\nmutation customerAddressCreate(\n$address: CustomerAddressInput!\n$defaultAddress: Boolean\n) {\ncustomerAddressCreate(\naddress: $address\ndefaultAddress: $defaultAddress\n) {\ncustomerAddress {\nid\n}\nuserErrors {\ncode\nfield\nmessage\n}\n}\n}\n': {
     return: CustomerAddressCreateMutation;
     variables: CustomerAddressCreateMutationVariables;
   };
